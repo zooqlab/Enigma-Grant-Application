@@ -36,7 +36,7 @@ Quests are the main direction of Enigma, the system of quests allows you to orga
 
 We have published the source code that is responsible for all data manipulation in the project. Some algorithms contain private data, such as the logic of calculating and validating score, accessing api with our private key.
 
-**Smart-contract** - [waxblock](https://testnet.waxblock.io/account/enigmatest12)
+**Smart-contract** - [waxblock](https://testnet.waxblock.io/account/enigmatest13)
 
 We have organized the structure of the quests as follows - 
 
