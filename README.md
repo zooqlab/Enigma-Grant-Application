@@ -64,3 +64,19 @@ The scoring table displays the actual scoring data in the user's scope, it takes
 
 **API** - git link
 
+We have developed a feature-rich graphQL api for all users to get the most detailed information on all community and quests on the platform.
+
+Current endpoints of our API:
+
+| Endpoint  | Description |
+| ------------- | ------------- |
+| **wallets**  | A list of all existing addresses (wallets) in the system that participated in community creation/execution.  |
+| **communities**  | A list of all existing communities on the platform by ID.  |
+| **communities[id]**  | The data for a specific community, including the owner's wallet, avatar, banner, verification status (retrieved from AtomicHub, Nefty), a list of members and the total count, and a list of quests with their statuses.  |
+| **quests**  | A list of all existing quests on the platform by ID.  |
+| **quests[id]**  | The data for a specific quest, including the title, owner's wallet, banner, leaderboard (ID - points), a list of sections with tasks (IDs of the tasks themselves).  |
+| **quests[wallet]**  | The data for a specific wallet within a quest, including a list of tasks and their status (ID - "success", "fail", "none"), position in the leaderboard, total points in the quest, and a boolean for rewards.  |
+| **tasks[id]**  | The data for a specific task, including the title, task type (social, quiz, online, etc.), description, point rewards, participation restrictions, frequency of completion, number of participants, and a list of participants who completed the task.  |
+| **tasks[id+wallet]**  | The data for a specific wallet within a task, including the task completion status and the sequential number of task completions.  |
+
+The work within the API will continue as we develop the next stages of the project. We plan to expand functionality and add additional data that can be obtained from the passport and analytics for convenient tracking of all projects and wallets on our platform.
