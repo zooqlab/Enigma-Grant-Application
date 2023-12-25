@@ -27,7 +27,7 @@ Quests are the main direction of Enigma, the system of quests allows you to orga
 
 ### Deliverable #1 - Quests stage 2 Development backend, smart-contract, API
 
-**Backend** - link repo
+**Backend** - [backend source](https://github.com/zooqlab/enigma-backend)
 
 1. We've implemented a full range of validation and data storage through an internal API when creating communities, quests, and tasks. Developed validation by our backend of all important actions in our smart contract that require validation of data outside the blockchain to verify.
 2. Structured data handling and split into 3 independent mysql databases, configured security and interaction with them.
@@ -36,13 +36,13 @@ Quests are the main direction of Enigma, the system of quests allows you to orga
 
 We have published the source code that is responsible for all data manipulation in the project. Some algorithms contain private data, such as the logic of calculating and validating score, accessing api with our private key.
 
-**Smart-contract** - link git + waxblock
+**Smart-contract** - [smart-contract source](https://github.com/zooqlab/enigma-quests-contract)
 
 We have organized the structure of the quests as follows - 
 
 The community table is the main table that allows users to create "groups" that contain all active quests and to which users can subscribe. Data in the table - community name, avatar, number of subscribers, quest id (+ status). 
 
-Quest table (a quest is a temporary event that includes itself on the frontend sections with specific tasks), which contains the quest name, description, banner, rewards, number of participants (successful is a participant who completed 1 task) and a list of task ids (+ point rewards and type)
+Quest table (a quest is time limited event that includes frontend sections with specific tasks), which contains the quest name, description, banner, rewards, number of participants (successful is a participant who completed 1 task) and a list of task ids (+ point rewards and type)
 
 Task table contains information on specific tasks, tasks are divided into different types (onchain, discord-social, twitter-social, tg-social, any, quiz, referral). Depending on the type of task, the cells may contain different content, but it is standardized. The table also contains task name, rewards in points, boolean values, description, the number of those who have completed the task.
 
@@ -62,7 +62,7 @@ The scoring table displays the actual scoring data in the user's scope, it takes
 | **edittask**  | Editing a task, without the ability to change the type and rewards.  |
 | **submittask**  | Passing a task and receiving an award.  |
 
-**API** - git link
+**API** - [api source](https://github.com/zooqlab/enigma-api)
 
 We have developed a feature-rich graphQL api for all users to get the most detailed information on all community and quests on the platform.
 
